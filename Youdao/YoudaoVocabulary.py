@@ -20,7 +20,7 @@ def createVocabularyByTranslation(fileName):
             xml_file.write('    <word>' + lines[line].strip('\n') + '</word>\n')
             line += 1
             xml_file.write('    <trans>' + '<![CDATA[' + lines[line].strip('\n') + ']]>' + '</trans>\n')
-            xml_file.write('    <tags>reading</tags>\n')  # reading是你单词本的名字，你可以改成自己的
+            xml_file.write('    <tags>'+fileName+'</tags>\n')  # reading是你单词本的名字，你可以改成自己的
             xml_file.write('    <progress>1</progress>\n')
             xml_file.write('</item>')
     xml_file.write('</wordbook>')
