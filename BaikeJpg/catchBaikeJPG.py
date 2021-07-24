@@ -27,6 +27,7 @@ def catch_Jpg(name):
     # 下载文件
     with open("result/"+name+".jpg", "wb") as code:
         code.write(f.content)
+    code.close()
 
 if __name__ == "__main__":
     failure = success = 0
