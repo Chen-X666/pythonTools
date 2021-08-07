@@ -8,14 +8,14 @@ Describe:  Github link: https://github.com/Chen-X666
 """
 import os
 
-def mergeAllTxt(filesPath,resultPath):
+def mergeAllTxt(filesPath):
     # coding=utf-8
     # 获取目标文件夹的路径
     filedir = filesPath
     # 获取当前文件夹中的文件名称列表
     filenames = os.listdir(filedir)
     # 打开当前目录下的result.txt文件，如果没有则创建
-    f = open(resultPath, 'w',encoding='utf-8')
+    f = open('result.txt', 'w',encoding='utf-8')
     # 先遍历文件名
     for filename in filenames:
         print(filename)
@@ -34,4 +34,4 @@ def getTxtByLineToList(filePath):
     return line
 
 if __name__ == '__main__':
-    print('')
+    mergeAllTxt('C:/Users/Chen/Desktop/pythonTools/txtprocess/files')
