@@ -9,8 +9,8 @@ def qp_decode(str):
 def qp_encode(str):
 	return quopri.encodestring(str.encode()).decode()
 
-f = csv.reader(open('./岭南花园业主电话号码2022-4月.csv', 'r', encoding = 'utf-8'))
-with open("岭南花园业主电话号码2022-4月.vcf","w", encoding = 'utf-8')as v:
+f = csv.reader(open('./csv/other.csv', 'r', encoding = 'utf-8'))
+with open("vcf/other.vcf","w", encoding = 'utf-8')as v:
 	for row in f:
 		print(row)
 		v.write("BEGIN:VCARD"+"\n")
@@ -22,3 +22,4 @@ with open("岭南花园业主电话号码2022-4月.vcf","w", encoding = 'utf-8')
 		v.write("TEL;CELL:"+row[3]+"\n")
 		#v.write("TEL;WORK:"+row[4]+"\n")
 		v.write("END:VCARD"+"\n")
+print('finished')

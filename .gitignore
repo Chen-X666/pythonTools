@@ -1,2 +1,5 @@
 /venv/
 /.idea
+/csv_to_vcf-master/csv/
+/csv_to_vcf-master/ori/
+/csv_to_vcf-master/vcf/
